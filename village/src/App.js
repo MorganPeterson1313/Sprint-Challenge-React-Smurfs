@@ -31,12 +31,30 @@ class App extends Component {
 
   }
 
+  // addSmurfs = ( newSmurf) => {
+  
+
+
+  //   axios
+  //     .post("http://localhost:3333/smurfs", newSmurf)
+  //     .then(response => {
+  //       this.setState({
+  //         smurfs: response.data
+  //       });
+  //       // this.props.history.push("/");
+  //     })
+  //     .catch(err => console.error(err));
+  // };
+
+
+
+
 
   
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm/>
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
