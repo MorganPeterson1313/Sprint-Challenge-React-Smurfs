@@ -57,7 +57,7 @@ class App extends Component {
       <div className="App">
          <nav>
           <div >
-            <NavLink exact to="/smurf-form">
+            <NavLink to="/smurf-form">
               Smurf Form
             </NavLink>
             <NavLink exact to="/">
@@ -66,8 +66,9 @@ class App extends Component {
            
           </div>
         </nav>
-        <Route exact path="/smurf-form"    component={SmurfForm}/>
-        <Route  path="/"  render= {props => <Smurfs {...props} smurfs={this.state.smurfs} />}/>
+        
+        <Route exact path="/"  render= {props => <Smurfs {...props} smurfs={this.state.smurfs} />}/>
+        <Route  path="/smurf-form"    component={SmurfForm}/>
       </div>
     );
   }
