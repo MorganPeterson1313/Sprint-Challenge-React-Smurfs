@@ -4,7 +4,25 @@ import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 import { Route, NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
+const LinksDiv = styled.div `
+margin: 5%;
+text-decoration: none;
+margin: 2%;
+color: yellow;
+
+
+`;
+
+// constLinks = styled.NavLink `
+
+// text-decoration: none;
+// margin: 2%;
+// color: yellow;
+
+// `;
+ 
 class App extends Component {
   constructor(props) {
     super(props);
@@ -56,15 +74,15 @@ class App extends Component {
     return (
       <div className="App">
          <nav>
-          <div >
-            <NavLink to="/smurf-form">
+          <LinksDiv >
+            <NavLink className="link" to="/smurf-form">
               Smurf Form
             </NavLink>
-            <NavLink exact to="/">
+            <NavLink className="link" exact to="/">
               Home
             </NavLink>
            
-          </div>
+          </LinksDiv>
         </nav>
         
         <Route exact path="/"  render= {props => <Smurfs {...props} smurfs={this.state.smurfs} />}/>
